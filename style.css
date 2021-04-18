@@ -1,0 +1,139 @@
+/* ANCHOR variables, fonts et généralités */
+:root {
+    --color-yellow: rgb(234, 159, 5); /*pour quelques textes*/
+    --color-black: rgb(28, 28, 28); /*pour le fond des cotés et des boutons et des promos*/
+    --color-grey: rgb(55, 55, 55); /*pour le fond du footer*/
+    --color-lightgrey: rgb(129, 129, 129); /*uniquement la barre dans le footer*/
+    --color-whitegrey: rgb(243, 243, 243); /*pour le fond du main au centre*/
+    --color-white: rgb(255, 255, 255); /*pour du texte et des fonds*/
+}
+
+@font-face {
+    font-family: liberation-Bold;
+    src: url("fonts/LiberationSans-Bold-webfont.ttf");
+}
+@font-face {
+    font-family: liberation-Regular;
+    src: url("fonts/LiberationSans-Regular-webfont.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    /* border: red 1px solid; */
+}
+
+body {
+    margin: 0;
+    font-family: liberation-Regular;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+}
+
+a:hover {border-bottom: 4px solid var(--color-yellow);} 
+
+
+/*TODO à partir de là on pourrait réduire le css en mettant des classes dans le html, comme pour le reste...*/
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    height: 2rem;
+    width: 150px;
+}
+button:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+h1, h2 {font-weight: normal;}
+h1 {font-size: 24px;}
+h2 {font-size: 16px;}
+
+footer {font-size: 12px;}
+
+hr {
+    border: 3px solid var(--color-lightgrey); 
+    max-width: 900px;
+}
+
+
+/* ANCHOR Couleurs et fonds */
+/* couleurs de texte et gras */
+.txt-yellow {color: var(--color-yellow);}
+.txt-black {color: var(--color-black);}
+.txt-white {color: var(--color-white);}
+.txt-bold {font-family: liberation-Bold; font-size: 24px;}
+.txt-barre {text-decoration: line-through;} /*TODO faire une ligne plus épaisse. mais comment?*/
+
+/* couleurs et images de fond */
+.bg-image {
+    background-image: url("images/background.jpg");
+    background-repeat: repeat;
+}
+.bg-black {background-color: var(--color-black);}
+.bg-grey {background-color: var(--color-grey);}
+.bg-whitegrey {background-color: var(--color-whitegrey);}
+.bg-white {background-color: var(--color-white);}
+
+/* ANCHOR tailles */
+.w-100 {max-width: 100%;}
+.w-1052 {max-width: 1052px;}
+.w-500only {width: 500px;}
+.w-400 {max-width: 400px;}
+.w-250 {max-width: 250px;}
+.w-auto {width: max-content;}
+
+/* ANCHOR display */
+.d-flex {display: flex}
+.d-block {display: block;}
+.d-inline {display: inline;}
+
+/* ANCHOR positions et comportement */
+/* TODO ranger toutes cette partie*/
+.txt-center {text-align: center;}
+.txt-right {text-align: end;}
+
+.wrap {flex-wrap: wrap;}
+
+.jc-around {justify-content: space-around;}
+.jc-between {justify-content: space-between;}
+.jc-evenly {justify-content: space-evenly;}
+.ai-center {align-items: center;}
+.ai-end {align-items: flex-end;}
+
+.m-auto {margin: auto;}
+.m-0 {margin: 0;}
+.m-1 {margin: 1rem;}
+.m-bottom {margin-bottom: 1rem;}
+.m-sm {margin: 4px;}
+.p-top {padding-top: 1rem;}
+.p-bottom {padding-bottom: 6rem;}
+.p-sm {padding: 4px;}
+.p-0 {padding: 0;}
+.p-1 {padding: 1rem;}
+.round-corner {border-radius: 8px;}
+
+.po-r {position: relative;}
+.po-a {position: absolute;}
+
+.bas {bottom: 4px;
+    left: 50%;
+    transform: translate(-50%);
+    width: max-content;
+}
+.top-right {
+    top: 4px;
+    right: -16px;    
+
+}
+.top-center {
+    left: 50%;
+    transform: translate(-50%);
+    top: -24px;
+}
