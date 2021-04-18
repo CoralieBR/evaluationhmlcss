@@ -73,7 +73,7 @@ hr {
 
 /* couleurs et images de fond */
 .bg-image {
-    background-image: url("images/background.jpg");
+    background-image: url("background.jpg");
     background-repeat: repeat;
 }
 .bg-black {background-color: var(--color-black);}
